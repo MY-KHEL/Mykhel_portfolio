@@ -5,6 +5,7 @@ import { Linkedin, Send, Twitter } from "lucide-react";
 import { useEffect, useRef } from "react";
 import { Button } from "./ui/button";
 import Link from "next/link";
+import Image from "next/image";
 gsap.registerPlugin(ScrollTrigger);
 
 export const HeroSection=({onScrollToAbout,onScrollToFooter,onScrollToProject}:{onScrollToAbout:any;onScrollToFooter:any;onScrollToProject:any})=>{
@@ -104,11 +105,13 @@ gsap.fromTo('.circle-image',{opacity:0,scale:0.1},{
               
             </div>
             <div className="flex justify-center circle-image opacity-0  items-center">
-                <div className="w-[300px] h-[300px] mx-auto border-2 border-sky-600/70 rounded-full relative">
+                <div className="w-[300px] h-[300px] p-2 mx-auto border-2 border-sky-600/70 rounded-full relative">
               <div className="orbit absolute left-1/2 top-1/2 w-0 h-0">
     <div className="w-[30px] h-[30px] rounded-full bg-sky-600 absolute -left-[15px] -top-[160px]"></div>
   </div>
-  
+                <div className=" mx-auto w-full h-full overflow-hidden  rounded-full">
+                    <Image src={'/portfolio-image.jpg'} alt="Michael Ojo" height={200} width={200} className="w-full "/>
+                </div>
                 </div>
             </div>
         </div>

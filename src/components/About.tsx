@@ -83,7 +83,8 @@ export const About = () => {
                     <p className="mt-6 text-lg syne ">I am an experienced <b>FrontEnd Developer </b> with over <b>3+</b> experience of working with ReactJs and NextJs Framework. I can utilize Frameworks like Tailwind CSS to create aesthically pleasing website and mind-blowing Animations with the use of Framer Motion / GSAP. </p>
                     <p className="mt-3 text-lg syne">I can work with a team of developers either backend or frontend developers and also work closely and accurately with UI/UX designers </p>
                     </div>
-                    <Button className="mt-4 button opacity-0"> Download Resume </Button>
+                    
+                    <Button className="mt-4 button opacity-0 py-2 " disabled>  Resume In Progress... </Button>
                     </div>
 
                     <div className="col-span-1">

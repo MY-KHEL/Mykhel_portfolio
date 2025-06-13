@@ -69,7 +69,7 @@ export const Footer =forwardRef<HTMLDivElement,{}>((props,ref) =>{
                 <ProfileForm/>
                 </div>
             </div>
-            <div className="col-span-1 w-full flex justify-end items-center">
+            <div className="col-span-1 w-full md:flex md:justify-end items-center">
             <div className=" text-white/50">
 
                 <p className="text-lg mb-4 "> Contact Me:</p>
@@ -84,7 +84,7 @@ export const Footer =forwardRef<HTMLDivElement,{}>((props,ref) =>{
                 <Github size={24} color="gray" className="inline items-center mr-4"/>Github</Link>
                       
                   </div>
-                <div className=" flex md:hidden gap-4 flex-row-reverse ">
+                <div className=" flex md:hidden  gap-4 justify-between flex-row-reverse ">
                           <Link href={"www.linkedin.com/in/michael-ojo-7b8551204"} target="_blank" rel="noopener noreferrer"><Linkedin size={24} color="gray"/></Link>
                         <Link href={"https://twitter.com/my_k_hel"} target="_blank" rel="noopener noreferrer"><Twitter size={24} color="gray"/></Link>
                           <Link href={'mailto:talk2michaelojo@gmail.com'} target="_blank" rel="noopener noreferrer"><Send size={24} color="gray"/></Link>
@@ -96,8 +96,8 @@ export const Footer =forwardRef<HTMLDivElement,{}>((props,ref) =>{
             </div>
             </div>
         </div>
-        <div className="text-center text-white/50 ">Copyright 2025 @ Mykhel</div>
         </div>
+        <div className="text-center text-white/50  mt-6">Copyright 2025 @ Mykhel</div>
 
         </div>
         </>

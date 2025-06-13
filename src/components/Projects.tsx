@@ -74,7 +74,7 @@ export const Project = forwardRef<HTMLDivElement, {}>((props, ref) => {
   }, [api])
 
   return (
-    <div ref={ref} id="project" className= " project-page hidden md:block p-4 md:px-[120px] overflow-hidden">
+    <div ref={ref} id="project" className= " project-page hidden lg:block p-4 md:px-[120px] overflow-hidden">
       <div className="mt-15 md:mt-30">
         <div className="flex justify-end relative  ">
          <div ref={screenRef}  className="absolute w-[400px] h-full  z-50 bg-white -right-100   border-l-8 opacity-0 border-l-sky-600 top-0"></div>
