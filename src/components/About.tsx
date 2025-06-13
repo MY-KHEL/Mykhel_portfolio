@@ -15,7 +15,9 @@ import { Button } from "./ui/button"
 gsap.registerPlugin(ScrollTrigger)
 
 
+
 export const About = () => {
+
     const screenRef = useRef(null)
   
 
@@ -69,7 +71,7 @@ export const About = () => {
     },[])
     return (
         <>
-            <div className="about-page mt-4 p-4 md:mt-50 md:mx-20 pb-6">
+            <div  className="about-page mt-4 p-4 md:mt-50 md:mx-20 pb-6">
                 <div className="">
                 <div className=" relative p-1">
                     <div ref={screenRef}  className="absolute w-[400px] h-full z-50 bg-white overflow-hidden -left-100  opacity-0 border-r-8 border-r-sky-600 top-0"></div>

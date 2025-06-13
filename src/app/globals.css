@@ -129,10 +129,14 @@
   }
   body {
     @apply bg-background text-foreground;
+   
     
-     
+    
   }
 
+}
+body{
+  scroll-behavior: smooth;
 }
 .syne{
     font-family: "Syne", sans-serif;

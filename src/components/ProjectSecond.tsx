@@ -10,13 +10,13 @@ import {
 import Autoplay from "embla-carousel-autoplay"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { useEffect, useRef, useState } from "react"
+import { forwardRef, useEffect, useRef, useState } from "react"
 import { projects } from "./data/Project"
 import { Button } from "./ui/button"
 gsap.registerPlugin(ScrollTrigger)
 
 
-export const SecondProject = () => {
+export const SecondProject = forwardRef<HTMLDivElement, {}>((props, ref) => {
   const [api, setApi] = useState<CarouselApi | null>(null)
   const [current, setCurrent] = useState(0)
  
@@ -59,7 +59,7 @@ export const SecondProject = () => {
   }, [api])
 
   return (
-    <div className=" md:hidden p-1 md:px-[120px] overflow-hidden">
+    <div ref={ref} className=" md:hidden p-1 md:px-[120px] overflow-hidden">
       <div className="mt-15 md:mt-30">
         <div className="flex justify-end relative  ">
          <div ref={screenRef}  className="absolute w-[400px] h-full  z-50 bg-white -right-97   border-l-8 opacity-0 border-l-sky-600 top-0"></div>
@@ -138,3 +138,4 @@ export const SecondProject = () => {
     </div>
   )
 }
+)

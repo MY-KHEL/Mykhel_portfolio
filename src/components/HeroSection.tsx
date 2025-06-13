@@ -4,9 +4,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Linkedin, Send, Twitter } from "lucide-react";
 import { useEffect, useRef } from "react";
 import { Button } from "./ui/button";
+import Link from "next/link";
 gsap.registerPlugin(ScrollTrigger);
 
-export const HeroSection=()=>{
+export const HeroSection=({onScrollToAbout,onScrollToFooter,onScrollToProject}:{onScrollToAbout:any;onScrollToFooter:any;onScrollToProject:any})=>{
     const screenRef = useRef(null)
    
    useEffect(() => {
@@ -95,8 +96,10 @@ gsap.fromTo('.circle-image',{opacity:0,scale:0.1},{
                 </h1>
 
                 <div className=" w-fit sub-text opacity-0   flex items-center gap-4 mt-4 " >
-                    <Button size={'lg'} > Get in Touch </Button>
-                    <Button size={'lg'} variant={'secondary'} className="shadow-md"> Browse Project </Button>
+                    <Button size={'lg'} onClick={onScrollToFooter}> Get in Touch </Button>
+                    
+                    <Button size={'lg'} variant={'secondary'} className="shadow-md inline md:hidden" onClick={onScrollToProject} > Browse Project </Button>
+                    <Button size={'lg'} variant={'secondary'} className="shadow-md hidden md:inline" onClick={onScrollToAbout}> Browse Project </Button>
                 </div>
               
             </div>
@@ -105,14 +108,16 @@ gsap.fromTo('.circle-image',{opacity:0,scale:0.1},{
               <div className="orbit absolute left-1/2 top-1/2 w-0 h-0">
     <div className="w-[30px] h-[30px] rounded-full bg-sky-600 absolute -left-[15px] -top-[160px]"></div>
   </div>
+  
                 </div>
             </div>
         </div>
         <div className=" hidden md:block absolute bottom-10 md:right-20">
         <div className=" flex gap-4 flex-col-reverse ">
-            <Linkedin size={24} color="black"/>
-            <Twitter size={24} color="black"/>
-            <Send size={24} color="black"/>
+            <Link href={"www.linkedin.com/in/michael-ojo-7b8551204"} target="_blank" rel="noopener noreferrer"><Linkedin size={24} color="black"/></Link>
+            <Link href={"https://twitter.com/my_k_hel"} target="_blank" rel="noopener noreferrer"><Twitter size={24} color="black"/></Link>
+            <Link href={'mailto:talk2michaelojo@gmail.com'} target="_blank" rel="noopener noreferrer"><Send size={24} color="black"/></Link>
+        
         </div>
         </div>
         </div>

@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { forwardRef, useEffect, useRef, useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import {
   Carousel,
@@ -17,7 +17,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { projects } from "./data/Project"
 gsap.registerPlugin(ScrollTrigger)
 
-export const Project = () => {
+export const Project = forwardRef<HTMLDivElement, {}>((props, ref) => {
   const [api, setApi] = useState<CarouselApi | null>(null)
   const [current, setCurrent] = useState(0)
 
@@ -74,7 +74,7 @@ export const Project = () => {
   }, [api])
 
   return (
-    <div className= " project-page hidden md:block p-4 md:px-[120px] overflow-hidden">
+    <div ref={ref} id="project" className= " project-page hidden md:block p-4 md:px-[120px] overflow-hidden">
       <div className="mt-15 md:mt-30">
         <div className="flex justify-end relative  ">
          <div ref={screenRef}  className="absolute w-[400px] h-full  z-50 bg-white -right-100   border-l-8 opacity-0 border-l-sky-600 top-0"></div>
@@ -149,4 +149,4 @@ export const Project = () => {
       </div>
     </div>
   )
-}
+})

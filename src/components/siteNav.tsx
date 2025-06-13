@@ -1,5 +1,6 @@
 import { Github } from "lucide-react"
 import { Navigation } from "./Navbar"
+import Link from "next/link"
 
 export const SiteNav =()=>{
     return(
@@ -15,7 +16,8 @@ export const SiteNav =()=>{
                 <Navigation/>
             </div>
             <div className=" bg-gray-300/60 rounded-full p-2">
-                <Github size={24} color="black" className="inline"/>
+            <Link href={'https://github.com/MY-KHEL'} target="_blank" rel="noopenner noreferrer">
+                <Github size={24} color="black" className="inline"/></Link>
             </div>
         </div>
         
